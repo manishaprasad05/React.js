@@ -1,4 +1,4 @@
-//
+//Destructuring array
 function Car(props)
 {
     return(

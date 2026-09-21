@@ -1,4 +1,4 @@
-//Destructuring Properties
+//Destructuring Children & array-object
 function Carinfo(props)
 {
     return(
