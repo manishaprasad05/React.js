@@ -1,0 +1,42 @@
+<html>
+<body>
+<script>
+class Student 
+{
+    constructor(name, rollNo, marks) 
+	{
+        this.name = name;
+        this.rollNo = rollNo;
+        this.marks = marks;
+    }
+}
+
+// Array of five student objects
+const students = [
+    new Student("Amit", 1, 75),
+    new Student("Priya", 2, 55),
+    new Student("Rahul", 3, 82),
+    new Student("Neha", 4, 68),
+    new Student("Kiran", 5, 45)
+];
+
+// Students scoring more than 60
+const passedStudents = students.filter(student => student.marks > 60);
+
+// Get only student names
+const studentNames = students.map(student => student.name);
+
+// Calculate average marks
+const totalMarks = students.reduce((total, student) => total + student.marks, 0);
+const averageMarks = totalMarks / students.length;
+
+// Display result
+console.log(`Students scoring more than 60:`);
+console.log(passedStudents);
+
+console.log(`Student Names: ${studentNames.join(", ")}`);
+
+console.log(`Average Marks: ${averageMarks}`);
+</script>
+</body>
+</html>

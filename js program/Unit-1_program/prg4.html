@@ -1,0 +1,36 @@
+<html>
+<body>
+<script>
+// Function using rest operator
+function calculateTotal(discount = 10, ...prices) 
+{
+
+    const total = prices.reduce
+	(
+        (sum, price) => sum + price,
+        0
+    );
+
+    const discountAmount = total * discount / 100;
+
+    const finalAmount = total - discountAmount;
+
+    console.log(`Total Price: ₹${total}`);
+    console.log(`Discount: ${discount}%`);
+    console.log(`Final Amount: ₹${finalAmount}`);
+
+    return finalAmount;
+}
+
+// Two arrays
+const prices1 = [1000, 2000, 3000];
+const prices2 = [4000, 5000];
+
+// Spread operator combines arrays
+const allPrices = [...prices1, ...prices2];
+
+// Call function
+calculateTotal(undefined, ...allPrices);
+</script>
+</body>
+</html>

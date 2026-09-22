@@ -1,0 +1,50 @@
+<html>
+<body>
+<script>
+function fetchStudentData() 
+{
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+
+            const success = true;
+
+            if (success) 
+			{
+                resolve({
+                    name: "Amit",
+                    rollNo: 101,
+                    marks: 85
+                });
+            } 
+			else 
+			{
+                reject("Failed to fetch student data");
+            }
+
+        }, 2000);
+    });
+}
+
+async function getStudentData() 
+{
+
+    try 
+	{
+        const student = await fetchStudentData();
+
+        console.log(
+            `Student Name: ${student.name}, Roll No: ${student.rollNo}, Marks: ${student.marks}`
+        );
+
+    } 
+	catch (error) 
+	{
+        console.log(`Error: ${error}`);
+    }
+}
+
+getStudentData();
+</script>
+</body>
+</html>

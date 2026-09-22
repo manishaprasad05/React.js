@@ -1,0 +1,39 @@
+<html>
+<body>
+<script>
+// Set stores unique roll numbers
+const rollNumbers = new Set();
+
+rollNumbers.add(101);
+rollNumbers.add(102);
+rollNumbers.add(103);
+rollNumbers.add(101); // Duplicate, will not be added
+
+console.log(`Roll Numbers: ${[...rollNumbers]}`);
+
+// Delete a student
+rollNumbers.delete(102);
+
+console.log(`After deletion: ${[...rollNumbers]}`);
+
+// Map associates roll number with student name
+const students = new Map();
+
+students.set(101, "Amit");
+students.set(102, "Priya");
+students.set(103, "Rahul");
+
+// Retrieve student's name
+console.log(`Student with roll number 101: ${students.get(101)}`);
+
+// Iterate through Map
+for (const [rollNo, name] of students) 
+{
+    console.log(`Roll No: ${rollNo}, Name: ${name}`);
+}
+
+// Total unique students
+console.log(`Total unique students: ${rollNumbers.size}`);
+</script>
+</body>
+</html>

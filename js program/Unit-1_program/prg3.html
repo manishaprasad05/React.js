@@ -1,0 +1,40 @@
+<html>
+<body>
+<script>
+const products = [
+    { name: "Laptop", price: 50000 },
+    { name: "Mouse", price: 800 },
+    { name: "Keyboard", price: 1500 },
+    { name: "Monitor", price: 12000 },
+    { name: "Printer", price: 9000 }
+];
+
+// Products costing more than 5000
+const expensiveProducts = products.filter(product => product.price > 5000);
+
+// Extract product names
+const productNames = products.map(product => product.name);
+
+// Calculate total price
+const totalPrice = products.reduce(
+    (total, product) => total + product.price,
+    0
+);
+
+// Destructuring
+products.forEach(({ name, price }) => {
+    console.log(`${name} costs ₹${price}`);
+});
+
+// Display results
+console.log(`Products above ₹5000:`);
+
+expensiveProducts.forEach(({ name, price }) => {
+    console.log(`${name} - ₹${price}`);
+});
+
+console.log(`Product Names: ${productNames.join(", ")}`);
+console.log(`Total Price: ₹${totalPrice}`);
+</script>
+</body>
+</html>
