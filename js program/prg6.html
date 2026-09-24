@@ -14,7 +14,7 @@ console.log(`Roll Numbers: ${[...rollNumbers]}`);
 // Delete a student
 rollNumbers.delete(102);
 
-console.log(`After deletion: ${[...rollNumbers]}`);
+console.log(`After deleting roll number 102: ${[...rollNumbers]}`);
 
 // Map associates roll number with student name
 const students = new Map();
@@ -25,6 +25,7 @@ students.set(103, "Rahul");
 
 // Retrieve student's name
 console.log(`Student with roll number 101: ${students.get(101)}`);
+console.log(`Student Details:`);
 
 // Iterate through Map
 for (const [rollNo, name] of students) 

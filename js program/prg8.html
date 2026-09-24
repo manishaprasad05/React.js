@@ -10,17 +10,20 @@ const students = [
 ];
 
 // 1. Students scoring more than 50
-const selectedStudents = students.filter(
+const selectedStudents = students.filter
+(
     student => student.marks > 50
 );
 
 // 2. Extract student names
-const studentNames = selectedStudents.map(
+const studentNames = selectedStudents.map
+(
     student => student.name
 );
 
 // 3. Calculate total marks
-const totalMarks = students.reduce(
+const totalMarks = students.reduce
+(
     (total, student) => total + student.marks,
     0
 );
@@ -28,14 +31,16 @@ const totalMarks = students.reduce(
 // 4 & 5. Destructuring and template literals
 console.log("Students scoring more than 50:");
 
-for (const { name, marks, course } of selectedStudents) {
+for (const { name, marks, course } of selectedStudents) 
+{
     console.log(
         `Name: ${name}, Marks: ${marks}, Course: ${course}`
     );
 }
 
 // 6. Unique courses using Set
-const uniqueCourses = new Set(
+const uniqueCourses = new Set
+(
     students.map(student => student.course)
 );
 
@@ -46,8 +51,10 @@ console.log(`Unique Courses: ${[...uniqueCourses].join(", ")}`);
 // 7. Iterate through all students using for-of
 console.log("All Students:");
 
-for (const student of students) {
-    console.log(
+for (const student of students) 
+{
+    console.log
+    (
         `${student.name} - ${student.marks} - ${student.course}`
     );
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 class LifeCycleDemo extends React.Component
 {
     //Mounting

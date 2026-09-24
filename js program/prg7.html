@@ -1,35 +1,21 @@
 <html>
 <body>
 <script>
-const student = {
+const student = 
+{
     name: "Amit",
-
-    regularFunction: function() {
-        console.log(this.name);
+    regularFunction: function() 
+    {
+    console.log(this.name);
     },
-
-    arrowFunction: () => {
-        console.log(this.name);
+    arrowFunction: function() 
+    {
+    console.log(this.name);
     }
 };
-
 student.regularFunction();
 student.arrowFunction();
 
-const student = {
-    name: "Amit",
-
-    regularFunction: function() {
-        console.log(this.name);
-    },
-
-    arrowFunction: function() {
-        console.log(this.name);
-    }
-};
-
-student.regularFunction();
-student.arrowFunction();
 </script>
 </body>
 </html>

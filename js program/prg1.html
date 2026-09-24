@@ -30,13 +30,11 @@ const studentNames = students.map(student => student.name);
 const totalMarks = students.reduce((total, student) => total + student.marks, 0);
 const averageMarks = totalMarks / students.length;
 
-// Display result
+// Display results
 console.log(`Students scoring more than 60:`);
 console.log(passedStudents);
-
 console.log(`Student Names: ${studentNames.join(", ")}`);
-
-console.log(`Average Marks: ${averageMarks}`);
+console.log(`Average Marks: ${averageMarks.toFixed(2)}`);
 </script>
 </body>
 </html>

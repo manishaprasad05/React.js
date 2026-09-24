@@ -1,35 +1,23 @@
 <html>
 <body>
 <script>
-// Function using rest operator
 function calculateTotal(discount = 10, ...prices) 
 {
+const total = prices.reduce((sum, price) => sum + price, 0);
+const discountAmount = total * discount / 100;
+const finalAmount = total - discountAmount;
 
-    const total = prices.reduce
-	(
-        (sum, price) => sum + price,
-        0
-    );
-
-    const discountAmount = total * discount / 100;
-
-    const finalAmount = total - discountAmount;
-
-    console.log(`Total Price: ₹${total}`);
-    console.log(`Discount: ${discount}%`);
-    console.log(`Final Amount: ₹${finalAmount}`);
-
-    return finalAmount;
+console.log(`Total Price: ₹${total}`);
+console.log(`Discount: ${discount}%`);
+console.log(`Final Amount: ₹${finalAmount}`);
 }
 
-// Two arrays
-const prices1 = [1000, 2000, 3000];
-const prices2 = [4000, 5000];
-
-// Spread operator combines arrays
+// Two arrays of product prices
+const prices1 = [12000, 12000, 20000];
+const prices2 = [20000, 10000];
+// Spread operator combines the arrays
 const allPrices = [...prices1, ...prices2];
-
-// Call function
+// Rest operator receives all prices
 calculateTotal(undefined, ...allPrices);
 </script>
 </body>

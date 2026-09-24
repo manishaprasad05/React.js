@@ -1,18 +1,9 @@
-import 
-{
-    calculateTotal,
-    calculatePercentage
-} from "./student.js";
+import { calculateTotal, calculatePercentage } from "./student.js";
 
-const marks = [80, 75, 90, 85, 70];
+const marks = [85, 70, 90, 80, 75];
 
 const total = calculateTotal(marks);
-
-const percentage = calculatePercentage
-(
-    total,
-    marks.length
-);
+const percentage = calculatePercentage(marks);
 
 console.log(`Total Marks: ${total}`);
-console.log(`Percentage: ${percentage}%`);
+console.log(`Percentage: ${percentage.toFixed(2)}%`);
