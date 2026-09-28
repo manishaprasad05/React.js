@@ -21,15 +21,15 @@ function LoginApp()
         return(
             <div>
                 <h1>Login Application</h1>
-
+                <br/>
                 <form onSubmit={handleLogin}>
                     <label>Enter Username: </label>
                     <input type="text" placeholder='Enter Username' value={username} onChange={(e)=>setUsername(e.target.value)} ></input>
-                    
+                    <br/>
                     <label>Enter Password: </label>
                     <input type="password" placeholder='Enter Password' value={password} onChange={(e)=>setPassword(e.target.value)} ></input>
-                    
-                    <button type="submit">Login</button>
+                    <br/><br/>
+                    <button type="submit">Login</button><br/>
                 </form>
                 <h2>{massage}</h2>
             </div>
