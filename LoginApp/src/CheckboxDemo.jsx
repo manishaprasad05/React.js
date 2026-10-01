@@ -16,23 +16,23 @@ function CheckboxDemo()
             }
             else
             {
-                setMsg(msg.filter((item)=>item!==value));
+                setMsg(msg.filter((hobbie)=>hobbie!==value));
             }
         }
         return(
-            <>
+            <div>
             <h3>Select your hobbies:</h3>
             <form onSubmit={handleSubmit}>
                 <label>
-                    <input type="checkbox" value="Cricket" onchange={handlehobbie}/>Cricket
+                    <input type="checkbox" value="Cricket" onChange={handlehobbie}/>Cricket
                 </label> <br/>
                 <label>
-                    <input type="checkbox" value="Football" onchange={handlehobbie}/>Football
+                    <input type="checkbox" value="Football" onChange={handlehobbie}/>Football
                 </label> <br/>
                 <label>
-                    <input type="checkbox" value="Hockey" onchange={handlehobbie}/>hockey
+                    <input type="checkbox" value="Hockey" onChange={handlehobbie}/>hockey
                 </label> <br/>
-                <button type="submit">Ok</button>
+                <button type="submit" >Ok</button>
             </form>
             <h3>
                 Selected:
@@ -40,7 +40,7 @@ function CheckboxDemo()
                     <p key={index}>{item}</p>
                 ))}
             </h3>
-            </>
+            </div>
         );
 }
 export default CheckboxDemo;
