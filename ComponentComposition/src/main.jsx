@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Card from './Card.jsx'
+import Button from './Button.jsx'
 
 //1)Containment (Children prop)
   const Header=()=><header><h1>WELCOME TO MY WEBSITE</h1></header>
@@ -14,7 +15,7 @@ createRoot(document.getElementById('root')).render(
     
     <Header/>
     <Content/>
-
+    
       <Card>
       <h2>Welcome</h2>
       <p>This is content inside the card component</p>
@@ -23,6 +24,10 @@ createRoot(document.getElementById('root')).render(
 
       <App/>
       -----------------
+    <Button text="Submit" color="blue" onClick={()=>alert("submit button clicked..")}/>
+    <Button text="Ok" color="green" onClick={()=>alert("ok button clicked..")}/>
+    <Button text="Cancle" color="red" onClick={()=>alert("cancle button clicked..")}/>
+      
       <Footer/>
     </StrictMode>,
 )
